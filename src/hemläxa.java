@@ -1,13 +1,11 @@
-    
-       import java.unit.Scanner; 
+import java.util.Scanner;
 
 public class hemläxa {
-
 
 	public static void main(String[] args) {
 
 
-		java.util.Scanner input = new java.util.Scanner(System.in); //använd detta när du vill ha input
+		Scanner input = new Scanner(System.in); //använd detta när du vill ha input
 		
 	          System.out.println("What's your name?: "); // skickar ett meddelande till användaren
 		
@@ -31,9 +29,9 @@ public class hemläxa {
 	
 	
 		System.out.println("\n" + "Information");
-		System.out.println("Name" + "       " + Name);
-		System.out.println("Adress" + "     " + Adress + "\n" + "           " + zipcode + " "+ City);
-		System.out.println("Phone" + "      " + Phone);
+		System.out.println("Name\t\t" + Name);
+		System.out.println("Adress\t\t" + Adress + "\n\t\t" +  zipcode + " "+ City);
+		System.out.println("Phone\t\t" + Phone);
 		
 	
 	}
