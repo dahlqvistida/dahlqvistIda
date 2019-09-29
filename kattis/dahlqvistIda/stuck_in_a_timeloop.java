@@ -1,3 +1,5 @@
+package dahlqvistIda;
+
 import java.util.Scanner;
 
 public class stuck_in_a_timeloop {
@@ -6,13 +8,11 @@ public class stuck_in_a_timeloop {
 		
 		Scanner input = new Scanner(System.in);
 		
-		int N = 0;
-		N = input.nextInt();
-		for (int N >= 1; N =< 100);{
-	    System.out.println(N*N + " " + "Abracadabra");
-		
-		
-	}
+		int ab = input.nextInt();
+		for(int i = 1; i <= ab; i++) {
+		System.out.println(i + " " + "Abracadabra");
+		}
+		input.close();
 
 }
 }
