@@ -5,6 +5,7 @@
 	<classpathentry kind="src" path="kattis"/>
 	<classpathentry kind="src" path="vecka40"/>
 	<classpathentry kind="src" path="vecka41"/>
+	<classpathentry kind="src" path="vecka43"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
