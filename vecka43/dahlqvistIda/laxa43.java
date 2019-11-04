@@ -10,7 +10,7 @@ public class laxa43 {
 		
 		max();
 		
-//		count(); //vet tyvärr inte hur jag ska lösa denna
+		count(); 
 		
 		kelvinToCelsius();
 		
@@ -64,22 +64,25 @@ public class laxa43 {
 	} 
 
 	
-	
-/*	public static int count(){
+	/**
+	 * Skriver ut ett alla tal mellan det användaren anger till 1 (positiva)
+	 */
+	public static void count(){
 		// vet inte hur jag skall göra denna tyvärr....
 		Scanner input = new Scanner(System.in);
 		
-		int n;
 		System.out.println("Skriv in ett heltaltal");
-		n = input.nextInt();
+		int n =input.nextInt();
+		int start=1;
 		
-		
-		int allasiffror = 0 < n;
-		
-		System.out.println(allasiffror + n);
-		
-		return allasiffror;
-	} */
+		while(start<=n){
+			
+			System.out.println(start);
+			start ++;
+			
+		}
+				
+	} 
 	
 	/**
 	 * omvandlar kelvin till celsius
@@ -186,7 +189,7 @@ public class laxa43 {
 					System.out.print("x");
 				}
 				System.out.println();
-	}
-	
+		}
+		
 	}
 }
