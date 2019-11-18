@@ -180,7 +180,7 @@ public class laxa43 {
 		
 		for(int a = 0; a < stair; a++) {
 			
-			for (int b = 0; b < stair-a; b++) {
+			for (int b = 1; b < stair-a; b++) {
 		
 					System.out.print(" ");
 
