@@ -280,7 +280,7 @@ public class Uppgift {
 	 * @param a
 	 * @param t
 	 * @param v2
-	 * @return
+	 * @return s
 	 */
 	public static double distanceAvAcceleration(double a, double t, double v2) {
 		
@@ -295,7 +295,7 @@ public class Uppgift {
 	 * @param f3
 	 * @param s3
 	 * @param t3
-	 * @return
+	 * @return p
 	 */
 	public static double effekt(double f3, double s3, double t3) {
 		
