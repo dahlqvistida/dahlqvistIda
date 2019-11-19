@@ -12,7 +12,7 @@ public class Uppgift {
 		System.out.println("Skriv in grader i Fahrenheit");
 		double fahrenheit = input.nextInt();
 		fahrenheitToKelvin(fahrenheit);
-		System.out.println(fahrenheit + " i kelvin är ");
+		System.out.print(fahrenheit + " i kelvin är ");
 		System.out.printf("%.2f", fahrenheitToKelvin(fahrenheit));
 		System.out.println();
 		
@@ -20,7 +20,7 @@ public class Uppgift {
 		System.out.println("Skriv in grader i Kelvin");
 		double kelvin = input.nextInt();
 		kelvinToCelsius(kelvin);
-		System.out.println(kelvin + " i celsius är ");
+		System.out.print(kelvin + " i celsius är ");
 		System.out.printf("%.2f", kelvinToCelsius(kelvin));
 		System.out.println();
 		
@@ -28,7 +28,7 @@ public class Uppgift {
 		System.out.println("Skriv in en hastighet i km/h");
 		double kmh = input.nextInt();
 		velocityConversion(kmh);
-		System.out.println(kmh + " i m/s är ");
+		System.out.print(kmh + " i m/s är ");
 		System.out.printf("%.2f", velocityConversion(kmh));
 		System.out.println();
 		
@@ -37,7 +37,7 @@ public class Uppgift {
 		double massk = input.nextInt();
 		double velocity = input.nextInt();
 		kineticEnergy(massk, velocity);
-		System.out.println("Den kinetiska energin är ");
+		System.out.print("Den kinetiska energin är ");
 		System.out.printf("%.2f", kineticEnergy(massk, velocity));
 		System.out.println();
 		
@@ -46,7 +46,7 @@ public class Uppgift {
 		double massp = input.nextInt();
 		double height = input.nextInt();
 		potentialEnergy(massp, height);
-		System.out.println("Den potentiella energin är ");
+		System.out.print("Den potentiella energin är ");
 		System.out.printf("%.2f", potentialEnergy(massp, height));
 		System.out.println();
 		
@@ -56,7 +56,7 @@ public class Uppgift {
 		double tal2 = input.nextInt();
 		double tal3 = input.nextInt();
 		delta(tal1, tal2, tal3);
-		System.out.println("Medelvärdet är ");
+		System.out.print("Medelvärdet är ");
 		System.out.printf("%.2f", delta (tal1, tal2, tal3));
 		System.out.println();
 		
@@ -76,7 +76,7 @@ public class Uppgift {
 		double s = input.nextInt();
 		double v = input.nextInt();
 		svtTime(s, v);
-		System.out.println("Tiden blir ");
+		System.out.print("Tiden blir ");
 		System.out.printf("%.2f", svtTime(s, v));
 		System.out.println();
 		
@@ -85,7 +85,7 @@ public class Uppgift {
 		double force = input.nextInt();
 		double distance = input.nextInt();
 		work(force, distance);
-		System.out.println("Arbetet blir ");
+		System.out.print("Arbetet blir ");
 		System.out.printf("%.2f", work(force, distance));
 		System.out.println();
 		
@@ -93,7 +93,7 @@ public class Uppgift {
 		System.out.println("Skriv in en hastighet");
 		double velocity2 = input.nextInt();
 		velocityToHeight(velocity2);
-		System.out.println("Höjden är ");
+		System.out.print("Höjden är ");
 		System.out.printf("%.2f", velocityToHeight(velocity2));
 		System.out.println();
 		
@@ -101,12 +101,35 @@ public class Uppgift {
 		System.out.println("Skriv in en volym");
 		double volym = input.nextInt();
 		sphereVolumeToRadius(volym);
-		System.out.println("Radien är ");
+		System.out.print("Radien är ");
 		System.out.printf("%.2f", sphereVolumeToRadius(volym));
 		System.out.println();
 		
 		
+		//Räknar ut sträcka med hjälp av tid och konstantacceleration och hastighet
+		System.out.println("Skriv in en accelleration");
+		double a = input.nextInt();
+		System.out.println("Skriv in en tid");
+		double t = input.nextInt();
+		System.out.println("Skriv in en hastighet");
+		double v2 = input.nextInt();
+		distanceAvAcceleration(a, t, v2);
+		System.out.print("Sträckan är ");
+		System.out.printf("%.2f", distanceAvAcceleration(a, t, v2));
+		System.out.println();
+	
 		
+		//Räknar ut effekt med hjälp av kraft, sträcka och tid
+		System.out.println("Skriv in en kraft");
+		double f3 = input.nextInt();
+		System.out.println("Skriv in en sträcka");
+		double s3 = input.nextInt();
+		System.out.println("Skriv in en tid");
+		double t3 = input.nextInt();
+		effekt(f3, s3, t3);
+		System.out.print("Effekten är ");
+		System.out.printf("%.2f", effekt(f3, s3, t3));
+		System.out.println();
 	}
 	
 	/**
@@ -252,5 +275,35 @@ public class Uppgift {
 		
 	}
 	
-
+	/**
+	 * Tar in en acceleration, tid och en hastighet och räknar ut sträckan
+	 * @param a
+	 * @param t
+	 * @param v2
+	 * @return
+	 */
+	public static double distanceAvAcceleration(double a, double t, double v2) {
+		
+		double s = v2*t + ((a*t*t)/2);
+		
+		return s;
+		
+	}
+	
+	/**
+	 * Tar in kraft, sträcka och tid och räknar ut effekten.
+	 * @param f3
+	 * @param s3
+	 * @param t3
+	 * @return
+	 */
+	public static double effekt(double f3, double s3, double t3) {
+		
+		double w = f3*s3;
+		double p = w/t3;
+		
+		return p;
+		
+	}
+	
 }
