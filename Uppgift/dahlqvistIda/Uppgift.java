@@ -240,6 +240,11 @@ public class Uppgift {
 		return height;
 	}
 	
+	/**
+	 * Tar in en volym och räknar ut radien på en spfären  
+	 * @param volym
+	 * @return radie
+	 */
 	public static double sphereVolumeToRadius(double volym){
 		
 		double radie = (Math.cbrt((3*volym) / (4*Math.PI)));
