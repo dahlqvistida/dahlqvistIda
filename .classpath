@@ -7,6 +7,7 @@
 	<classpathentry kind="src" path="vecka41"/>
 	<classpathentry kind="src" path="vecka43"/>
 	<classpathentry kind="src" path="Uppgift"/>
+	<classpathentry kind="src" path="vecka47"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
