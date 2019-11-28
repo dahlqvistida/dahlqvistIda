@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class arreyer {
-	/*
+	/* EN SAMLING AV SAMMA DATATYP
 	 * ARRAYER en stor låda som inehåller flera smålådor. Kan tex vara intarry, då
 	 * inehåller alla lådor en int. när man kallar på lådorna så är första låda
 	 * låda0, och den andra är låda1. MAN KAN INTE blanda datatyper i en array. Man
