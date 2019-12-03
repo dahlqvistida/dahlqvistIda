@@ -14,7 +14,7 @@ public class array2 {
 		for (int i = 0; i < namn.length; i++) { //kollar strängen, för och efternamn
 			
 				
-				if (namn[i].contains("a")) { 
+				if (namn[i].contains("B")) { 
 					antalA++;		
 				
 				
@@ -23,8 +23,9 @@ public class array2 {
 					
 			}
 		}
-		System.out.println("Antal a är " + antalA);
+		
 
 	}
-
+		System.out.println("Antal a är " + antalA);
+	}
 }
