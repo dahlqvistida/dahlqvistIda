@@ -226,6 +226,23 @@ public class homeworkVecka48 {
 		return antal;
 	}
 	
+	//FUNKAR INTE ÄNNU
+	private static int fiveLetters(String[] names) {
+		int antal = 0;
+		for (int index = 0; index < names.length; index++) {
+			
+			for (int j = 0, j++) {
+				if (j == 5) {
+					antal++;
+				}
+			}
+		}
+
+	return antal;
+	
+}
+	
+	
 	
 	
 	
