@@ -83,7 +83,7 @@ public class homeworkVecka48 {
 		System.out.println(" personer som börjar på L");
 		
 		//fiveLetters(names)
-		System.out.println(fiveLetters(names));
+		//System.out.println(fiveLetters(names));
 
 	}
 
@@ -226,21 +226,19 @@ public class homeworkVecka48 {
 		return antal;
 	}
 	
-	//FUNKAR INTE ÄNNU
+	/*FUNKAR INTE ÄNNU
 	private static int fiveLetters(String[] names) {
 		int antal = 0;
 		for (int index = 0; index < names.length; index++) {
-			
-			for (int j = 0, j++) {
-				if (j == 5) {
+		
+				if (index == 5) {
 					antal++;
-				}
 			}
 		}
 
 	return antal;
 	
-}
+}*/
 	
 	
 	
