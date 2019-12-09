@@ -77,9 +77,9 @@ public class homeworkVecka48 {
 		System.out.println(countNumbers(numbers, 9));
 		System.out.println();
 	
-		//nameL(names);
+		//countNameWithLetter(names);
 		System.out.print("Det finns ");
-		System.out.print(nameL(names));
+		System.out.print(countNameWithLetter(names, ("L")));
 		System.out.println(" personer som börjar på L");
 		
 		//fiveLetters(names)
@@ -209,22 +209,25 @@ public class homeworkVecka48 {
 	}
 
 	/**
-	 * UPPGIFT 7 kollar hur många namn det är som börjar på L
+	 * UPPGIFT 7 Räknar hur många namn som börjar på en viss bokstav
 	 * @param names
-	 * @return antal
+	 * @param comparable
+	 * @return comparableCount 
 	 */
-	private static int nameL(String[] names) {
+	private static int countNameWithLetter(String[] names, String comparable) {
 		
-		int antal = 0; //antal L
-		
-		for (int index = 0; index < names.length; index++) { //kollar strängens namn
-			
-			if (names[index].contains("L")) { 
-				antal++;		
-	}
+		int comparableCount = 0;
+		for (int index = 0; index < names.length; index++) {
+
+			if (names[index].contains(comparable)) {
+				comparableCount++;
 			}
-		return antal;
+		}
+		return comparableCount;
+		
 	}
+	
+	
 	
 	/*FUNKAR INTE ÄNNU
 	private static int fiveLetters(String[] names) {
