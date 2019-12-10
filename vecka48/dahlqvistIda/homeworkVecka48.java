@@ -208,8 +208,7 @@ public class homeworkVecka48 {
 		return sum;
 	}
 
-	/**
-	 * UPPGIFT 7 Räknar hur många namn som börjar på en viss bokstav
+	/**UPPGIFT 7 Räknar hur många namn som börjar på en viss bokstav
 	 * @param names
 	 * @param comparable
 	 * @return comparableCount 
