@@ -19,11 +19,34 @@ public class homeworkWeek51 {
 		//Prints out an empty line to make the console look more structured 
 		System.out.println();
 
+		
+		//Creates a boolean whit the name success and gives with the false statement
+		boolean success = false; 
+		
 		//Printing out text about what choice the user makes
 		System.out.print("Your choice is: ");
+		//Creating an integer where the user later will writes the number for the choice
+		int choice;
 		
-		//Creating an integer where the user writes the number for the choice
-		int choice = input.nextInt();
+		/*//Creating a loop, where success is true
+		while (!success) { 
+			
+			try {
+				//User gives the variable their number of choice
+				choice = input.nextInt();
+				System.out.println("You made this choice: " + choice);
+				
+				success = true; 
+				               
+				
+			} 
+			//If the user writes their input wrong
+			catch (Exception a) {
+				input.next();
+				System.out.println("You typed the WRONG input, try again!");
+			}
+		}*/
+		
 
 		//Creating a String variable for the pastries (bakverk)
 		String pastry;
