@@ -8,7 +8,12 @@ public class homeworkWeek51 {
 		
 		//Creating a scanner to get input from the console
 		Scanner input = new Scanner(System.in);
-
+		
+		//Creating an integer where the user later will make their choice. 
+		int choice;
+		
+		//A do-while loop so the program loops until you type 5 
+		do {
 		//Printing out information about what choices the user can make
 		System.out.println("Choose what you would want to bake");
 		System.out.println("(1) - Xmas candy");
@@ -20,37 +25,14 @@ public class homeworkWeek51 {
 		System.out.println();
 
 		
-		//Creates a boolean whit the name success and gives with the false statement
-		boolean success = false; 
-		
 		//Printing out text about what choice the user makes
 		System.out.print("Your choice is: ");
-		//Creating an integer where the user later will writes the number for the choice
-		int choice;
+		//Where the user makes their choice
+		choice = input.nextInt();
 		
-		/*//Creating a loop, where success is true
-		while (!success) { 
-			
-			try {
-				//User gives the variable their number of choice
-				choice = input.nextInt();
-				System.out.println("You made this choice: " + choice);
-				
-				success = true; 
-				               
-				
-			} 
-			//If the user writes their input wrong
-			catch (Exception a) {
-				input.next();
-				System.out.println("You typed the WRONG input, try again!");
-			}
-		}*/
 		
-
 		//Creating a String variable for the pastries (bakverk)
 		String pastry;
-
 		
 		//Creating a switch statement and all cases for the users choice 
 		switch (choice) {
@@ -110,9 +92,10 @@ public class homeworkWeek51 {
 			//This is to stops this switch
 			break;
 		
-		//Case 5 prints out a goodbye phrase because the user chosed to quit
+		//Case 5 prints out a goodbye phrase because the user choose to quit
 		case 5:
-			System.out.println("That's your loss, Thank you for today!");
+			System.out.println("That's your loss. Have a great day!");
+			
 			//This is to stops this switch
 			break;
 		
@@ -120,15 +103,21 @@ public class homeworkWeek51 {
 		default:
 			pastry = "invalid";
 			System.out.println("You have made a " + pastry + " choice!");
-			System.out.println("Make a correct choice please");
+			System.out.println("You have to restart the program and try again");
 			System.out.println();
+			
 			//This is to stops this switch
 			break;
 			
 		}
+		}
+		//When you type 5 the loop will stop 
+		while (choice != 5 );
 		
 		//Closes the scanner input
 		input.close();
+		
+		
 	}
-
+	
 }

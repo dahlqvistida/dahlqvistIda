@@ -33,7 +33,9 @@ public class hittaFelEx2 {
 			System.out.println("Array index out of bound");
 		}
 		
-
+		
+		input.close();
 	}
 
+	
 }

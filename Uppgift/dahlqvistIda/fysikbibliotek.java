@@ -2,7 +2,7 @@ package dahlqvistIda;
 
 import java.util.Scanner;
 
-public class Uppgift {
+public class fysikbibliotek {
 
 	public static void main(String[] args) {
 		
@@ -130,6 +130,8 @@ public class Uppgift {
 		System.out.print("Effekten är ");
 		System.out.printf("%.2f", effekt(f3, s3, t3));
 		System.out.println();
+		
+		input.close();
 	}
 	
 	/**

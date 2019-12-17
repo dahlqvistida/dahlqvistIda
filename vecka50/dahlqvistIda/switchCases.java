@@ -54,6 +54,7 @@ public class switchCases {
 			break;
 		}
 
+		input.close();
 	}
 
 }
