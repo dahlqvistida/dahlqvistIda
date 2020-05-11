@@ -72,12 +72,7 @@ public class Hangman {
 				//ett nummer tas fram som motsvarar en plats i arrayen
 				//på den platsen i arrayen finns ordet spelaren skall gissa på 
 				arrayNumber = Interval(startArrayNumber, endArrayNumber, arrayNumber);
-				
-				//TO_DO: Ta bort denna
-				System.out.println(arrayNumber);
-				
-				//TO-DO: Ta bort denna: 
-				System.out.println(shortList[arrayNumber]);
+			
 				
 				//tar fram själva ordet man skall gissa på med hjälp av array platsen som
 				//tidigare har tagits fram.
@@ -89,6 +84,7 @@ public class Hangman {
 			//om spelaren väljer level 2 så körs case 2
 			case 2: 
 				
+				System.out.println("Du har valt medel-nivån");
 				//så många ord det är i listan, - 1 eftersom arrayen börjar på plats 0.(Så många platser det finns o välja mellan)
 				endArrayNumber = 10-1;
 				
@@ -97,11 +93,6 @@ public class Hangman {
 				//på den platsen i arrayen finns ordet spelaren skall gissa på 
 				arrayNumber = Interval(startArrayNumber, endArrayNumber, arrayNumber);
 				
-				//TO-DO: Ta bort denna:
-				System.out.println(arrayNumber);
-				
-				//TO-DO: Ta bort denna: 
-				System.out.println(longList[arrayNumber]);
 				
 				//tar fram själva ordet man skall gissa på med hjälp av array platsen som
 				//tidigare har tagits fram.
@@ -120,11 +111,7 @@ public class Hangman {
 				//på den platsen i arrayen finns ordet spelaren skall gissa på 
 				arrayNumber = Interval(startArrayNumber, endArrayNumber, arrayNumber);
 				
-				//TO-DO: Ta bort denna:
-				System.out.println(arrayNumber);
 				
-				//TO-DO: Ta bort denna: 
-				System.out.println(veryLongList[arrayNumber]);
 				
 				//tar fram själva ordet man skall gissa på med hjälp av array platsen som
 				//tidigare har tagits fram.
@@ -136,13 +123,30 @@ public class Hangman {
 			default:
 				break;
 			}
-			//Vald level presenteras
 		
-			//Antal bokstäver till ordet presenteras
-		
-			//Spelaren börjar gissa på bokstav
-		
+			System.out.println("Vill du spela igen?");
+			System.out.println("(1) - Ja");
+			System.out.println("(2) - Nej");
 			
+			int playAgain = input.nextInt();
+			
+			switch (playAgain) {
+			case 1:
+				
+				System.out.println("Vad skoj! Lycka till!");
+				
+				break;
+			
+			case 2:
+				
+				System.out.println("Vad tråkigt, kom tillbaka snart!");
+				
+				run = false; 
+				
+				break;
+			default:
+				break;
+			}
 			
 		} while (run);
 		
@@ -168,7 +172,10 @@ public class Hangman {
 		
 	}
 
-	
+	/**
+	 * Låter användaren gissa på bokstäver till hiddenWord
+	 * @param hiddenWord
+	 */
 	private static void convertString(String hiddenWord) {
 		
 		
@@ -186,39 +193,80 @@ public class Hangman {
         //men denna kommer spara alla korrekta bokstäver man gissat på
         char[] charGuessedLetters = new char[charGuessAtThisWord.length];
         
+        int a = 0;
         
+        //Sålänge a är mindre än antalet bokstäver i hiddenWord så körs while-loopen
+        while(hiddenWord.length() > a) {
+        	
+       	 //Alla platser i arrayen består av '-'
+       	 charGuessedLetters[a] = '-';
+       	 
+       	 a++;
+        }
+        int characters = 0;
         
         //för varje bokstav(c) i arrayen så skrivs "_" ut för att visa hur många bokstäver det skall gissas på.  
-         for(char c : charGuessAtThisWord) {
+        for(char c : charGuessAtThisWord) {
         	 
         	 System.out.print("_ ");
         	 
+        	 characters++;
+        	 
          }
-        
-        
-        for ( int i = 0; i < guesses; i++){
-    	 	
-        	letter = input.next().charAt(0);
-        	
-			 for (char c : charGuessAtThisWord) {
-			
-       	 if (letter == c) {
-       		 
-				System.out.print(c);
-				
-				
-       	 	}else if (letter != c && guesses > 0){
-       	 		
-				System.out.print("_ ");
-				
-				
-    }
-  
-}
+        System.out.println("Ordet har " + characters + " bokstäver");
+        System.out.println();
 
-}
+         do {
+        	 
+        	 System.out.println("Gör en gissning");
+			
+        	 letter = input.next().charAt(0);
+        	 
+
+        	 if(hiddenWord.contains(letter + "")) {
+        		
+        		
+        		 for(int i = 0; i < charGuessAtThisWord.length; i++) {
+        			 
+        				if(hiddenWord.charAt(i) == letter) {
+        				
+        					charGuessedLetters[i] = letter;
+        					
+           				 }
+        				
+        		 	}
+        		 
+        		 System.out.println(charGuessedLetters);
+        		 
+        	 }else {
+        		 System.out.println("Du gissade fel.");
+        		 
+        		 guesses--;
+        		 
+        		 System.out.println("Du har " + guesses + " gissningar kvar");
+        		 System.out.println();
+        	 }
+        		 
+        	 if(hiddenWord.equals(String.valueOf(charGuessedLetters))) {
+        					
+        		 System.out.println();
+        					System.out.println("Du vann!");
+        					System.out.println("Ordet var: " + hiddenWord);
+        					System.out.println();
+        					
+        					runGuessing = false;
+        				}
+        				 
+        			 
+        	 if(guesses == 0) {
+        		 
+        		 System.out.println("Du förlora!");
+        		 runGuessing = false;
+        	 }
+        	 
+		} while (runGuessing);
          
-	}
+}
 }
      
 	
