@@ -52,7 +52,7 @@ public class Hangman {
 			System.out.println("Välj nivå");
 			System.out.println();
 			System.out.println("(1) - Lätt: 5-10 bokstäver");
-			System.out.println("(2) - Svår: 10+ bokstäver");
+			System.out.println("(2) - Medel: 10+ bokstäver");
 			System.out.println("(3) - Mycket Svår: långalånga ord");
 			
 			//Spelaren väljer level
